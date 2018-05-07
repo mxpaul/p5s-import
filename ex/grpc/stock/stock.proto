@@ -1,0 +1,56 @@
+syntax = "proto3";
+package stock;
+
+message FullProduct {
+	string   ProdId=1;
+	string   Name=2;
+	string   Desc=3;
+	float    BaseWholePrice=4;
+	float    WholePrice=5;
+	float    BaseRetailPrice=6;
+	float    RetailPrice=7;
+	bool     ForbidDiscount=8;
+	float    DiscountPercent=9;
+
+	string   Material=10;
+	float    Diameter=11;
+	float    Length=12;
+	repeated Picture Pictures = 13;
+	repeated Variation Variants = 14;
+	repeated Category Categories = 15;
+
+	string   PictureSmall = 16;
+	string   VendorProdId = 17;
+	string   VendorName = 18;
+	string   VendorCollectionName = 19;
+
+	message Picture {
+		string URL = 1;
+	}
+
+	message Variation {
+		string AID = 1;
+		int32  Count = 2;
+		int64  ShippingDate = 3;
+	}
+
+	message Category {
+		string Name = 1;
+		string SubName = 2;
+	}
+}
+
+message ImportReply {
+	bool       OK =1;
+	string     Description = 2;
+	ImportStat Stat = 3;
+
+	message ImportStat {
+		int32 Inserted = 1;
+		int32 Updated = 2;
+	}
+}
+
+service Stock {
+	rpc ImportProduct(FullProduct) returns (ImportReply) {}
+}
