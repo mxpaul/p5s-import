@@ -10,7 +10,7 @@ import (
 	"gopkg.in/mgo.v2"
 	"gopkg.in/mgo.v2/bson"
 
-	stock "github.com/mxpaul/p5s-import/ex/grpc/stock"
+	stock "github.com/mxpaul/p5stock/ex/grpc/stock"
 )
 
 var (

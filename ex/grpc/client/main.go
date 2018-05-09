@@ -9,8 +9,8 @@ import (
 
 	"google.golang.org/grpc"
 
-	p5s "github.com/mxpaul/p5s-import"
-	stock "github.com/mxpaul/p5s-import/ex/grpc/stock"
+	p5s "github.com/mxpaul/p5stock"
+	stock "github.com/mxpaul/p5stock/ex/grpc/stock"
 )
 
 var (
