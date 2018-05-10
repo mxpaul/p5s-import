@@ -1,4 +1,4 @@
-package p5s
+package p5stock
 
 import (
 	"log"
