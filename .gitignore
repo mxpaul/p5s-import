@@ -1,2 +1,5 @@
 tmp
 docker/mongo/data/
+*.pb.go
+#mocks/*.mock.go
+*.swp
